@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+ 		<title>The Wall</title>
+ 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+ 		<script type="text/javascript" src='{{ url_for('static', filename='script/script.js') }}'></script>
+
+    </head>
+ 	<body>
+ 		<div class="wrapper">
+	 		<div class="nav">
+ 				<h1 class="logo">Coding Dojo wall</h1>
+ 				<div class="namebox">
+ 				<h3 class="wel">Welcome</h3>				
+					<p class="name">{{users['first_name']}}</p>
+					<p class="name">{{users['last_name']}}</p>
+				</div>	
+ 				<a  href='/logout'>
+					<button class="outwel" >Log Out</button>
+				</a>
+			</div>
+ 			<div id="mes">
+ 				<h3>Post a message</h3>
+ 				<form action="/message" method="POST">
+ 					<input type="textarea" name="message" id='message'></input>
+ 					<input id="po" type="submit" value="Send">
+ 				</form>		
+ 				<hr>
+ 				{% for message in messages: %}
+ 					<h3>MESSAGE</h3>
+					<p class="yiha">Name: {{message['first_name']}}</p><p class="yiha">{{message['last_name']}}</p><p class="yiha">{{message['created_at']}}</p>
+					<div class="special">{{message['message']}}</div>
+ 					
+					
+					{% for comment in comments: %}
+						{% if comment['message_id'] == message['id']: %}
+							<h3>POST</h3>
+							<p class="yiha">Name: {{comment['first_name']}}</p><p class="yiha">{{message['last_name']}}</p><p class="yiha">{{comment['created_at']}}</p>
+							<div class="special">{{comment['comment']}}</div>
+						{% endif %}					
+					 {%endfor%}
+					 <h3>Post a comment</h3>				
+		 				<form action="/comment" method="POST">
+		 					<input type="textarea" name="comment" id='message'></input>
+		 					<input id="po" type="submit" value="Send">
+		 					<input type="hidden" name="message_id" value="{{message['id']}}">
+		 				</form>	 
+		 				<hr>
+					
+	 			{%endfor%}
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+	margin: 0px;
+	padding: 0px;
+
+}
+h1 {
+	text-align: center;
+}
+label {
+	display: block;
+	
+}
+input {
+	/*text-align: center;*/
+	margin: 10px 80px 0px 0px;
+}
+	 .bu {
+		width: 112px;
+		margin: 10px 80px;
+		background-color: #F0F0F0;
+		height: 25px;
+		box-sizing: border-box;
+		border: 1px outset #F0F0F0;
+}
+
+div  {
+	display: inline-block;
+	vertical-align: top;
+	width: 400px;
+	height: 400px;
+	border: 2px solid black;
+
+}
+
+#lowe {
+	margin: 100px 0px 0px 10px;
+}
+
+form {
+	text-align: right;
+}
+
+.wrapper {
+	width: 1000px;
+	height: auto;
+	margin-left: center;
+
+}
+
+.nav {
+	width: 1000px;
+	height: 110px;
+	background-color: lightgray;
+}
+
+.wel {
+	display: inline-block;
+}
+
+.name {
+	display: inline-block;
+}
+
+.outwel {
+	margin-left: 20px;
+	position: absolute;
+	right: 300px;
+    top: 45px;
+}
+
+
+	
+	.logo {
+		text-align: left;
+		font-size: 50px;
+		margin:30px 25px;
+		display: inline-block;
+	}
+
+	.out {
+		margin-left: 430px
+	}
+
+#flag {
+	text-align: center;
+	color: red;
+}
+
+button {
+	
+	padding: 6px;
+    width: 112px;
+    margin: 10px;
+    
+}
+
+#wel {
+	text-align: center;
+}
+
+.namebox {
+	width: 400px;
+	text-align: right;
+	height: 25px;
+	border:none;
+	margin-top:57px; 
+}
+
+#mes {
+	width: 960px;
+	height: auto;
+	border: 1px solid black;
+	padding: 20px;
+}
+
+#message {
+	width :798px;
+	height: 70px;
+	margin-right: 148px;
+	padding: none;
+	overflow-y: scroll;
+	vertical-align: top; 
+}
+
+#po {
+
+	width: 112px;
+	margin: 10px 0px 10px 700px;
+	background-color: #F0F0F0;
+	height: 25px;
+	box-sizing: border-box;
+	border: 1px outset #F0F0F0;
+	display: block;
+}
+
+h3 {
+	margin-left: 10px;
+}
+
+.special {
+	width :798px;
+	height: 70px;
+	margin-right: 148px;
+	border: none;
+}
+.yiha{
+	display: inline-block;
+}
+

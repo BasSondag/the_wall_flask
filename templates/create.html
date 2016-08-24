@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+ 		<title>The Wall Sing UP</title>
+
+ 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+ 		<script type="text/javascript" src='{{ url_for('static', filename='script/script.js') }}'></script>
+
+    </head>
+ 	<body>
+ 		<div class=wrapper >
+ 			<div class="nav">
+ 				<h1 class="logo">Coding Dojo wall</h1>
+ 				<a  href='/logout'>
+					<button class="out" >Log Out</button>
+				</a>
+ 			</div>
+	 		<div class="log">
+				<h1>Sign Up:</h1>
+				
+
+				<form action='/users' method="POST">
+					{% with messages = get_flashed_messages() %}
+						{% if messages %}
+							{% for message in messages %}
+								<p id="flag">{{message}}</p>
+							{% endfor %}
+						{% endif %}
+					{% endwith %}
+					<label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+					<label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+					<label for="email">Email:<input type="text" name="email" id="email"></label>
+					<label for="password">Password:<input type="password" name="password" id="password"></label>
+					<label for="email">Confirm password:<input type="password" name="confirm" id="confirm"></label>
+					<input class="bu" type="submit" value="add">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>	
